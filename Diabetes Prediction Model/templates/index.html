@@ -1,0 +1,370 @@
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1" >
+		<style>
+			.MiddleSection {
+				width: auto;
+				margin-inline: auto;
+				padding: 3%;
+				border-style: solid;
+				border-color: #333333;
+				border-radius: 1.5rem;
+				border-width: 0.5rem;
+			}
+
+			.TextBoxing {
+				padding: 1%;
+				background-color: #518bbd;
+				border-style: solid;
+				border-color: #333333;
+				border-radius: 1.5rem;
+				border-width: 1rem;
+			}
+
+			@media only screen and (min-width: 769px) {
+				.MiddleSection {
+					width: 60%;
+				}
+			}
+		</style>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	</head>
+	<body style="background-color: #E8DDB5;">
+		<div class="h-100 d-flex flex-column justify-content-evenly align-items-center" style="background-color: aquamarine; width: 100%;">
+			<h1 class="TextBoxing">Enter your details below to get an estimate of your risk of Diabetes!</h1>
+			<button class="TextBoxing" type="button" data-bs-toggle="collapse" data-bs-target="#InpForm" aria-expanded="false" aria-controls="InpForm">
+				<h4>Click here and scroll down to form</h4>
+			</button>
+		</div>
+		<div class="my-5 collapse" id="InpForm">
+
+			<div class="MiddleSection" style="background-color: #79ADDC;">
+				<h3 class="d-flex justify-content-around">Enter Your Details</h3>
+				<form method="post" action="/input">
+					<div class="my-3">
+						<label for="Sex">Sex: </label>
+						<select id="Sex" name="Sex" required class="form-select my-1">
+							<option value="" selected disabled hidden>--Select--</option>
+							<option value="0">Female</option>
+							<option value="1">Male</option>
+						</select>
+					</div>
+
+					<div class="my-3">
+						<label for="Age">Age: </label>
+						<select id="Age" name="Age" required class="form-select my-1">
+							<option value="" selected disabled hidden>--Select--</option>
+							<option value="1">18-24</option>
+							<option value="2">25-29</option>
+							<option value="3">30-34</option>
+							<option value="4">35-39</option>
+							<option value="5">40-44</option>
+							<option value="6">45-49</option>
+							<option value="7">50-54</option>
+							<option value="8">55-59</option>
+							<option value="9">60-64</option>
+							<option value="10">65-69</option>
+							<option value="11">70-74</option>
+							<option value="12">75-79</option>
+							<option value="13">80 or Older</option>
+						</select>
+					</div>
+
+					<div class="my-3">
+						<label for="Education"
+							>How many years of education have you had?
+						</label>
+						<select
+							id="Education"
+							name="Education"
+							required
+							class="form-select my-1"
+						>
+							<option value="" selected disabled hidden>--Select--</option>
+							<option value="1">Never attended school</option>
+							<option value="2">Grades 1 through 7</option>
+							<option value="3">Grades 8 through 10</option>
+							<option value="4">Grade 10 onwards till end of school</option>
+							<option value="5">Less than 4 years since end of school</option>
+							<option value="6">
+								4 years or more since graduation from school
+							</option>
+						</select>
+					</div>
+
+					<div class="my-3">
+						<label for="Income"
+							>What is your estimated total household income?
+						</label>
+						<select id="Income" name="Income" required class="form-select my-1">
+							<option value="" selected disabled hidden>--Select--</option>
+							<option value="1">Less than $10000</option>
+							<option value="2">$10000 - $20000</option>
+							<option value="3">$20000 - $30000</option>
+							<option value="4">$30000 - $40000</option>
+							<option value="5">$40000 - $50000</option>
+							<option value="6">$50000 - $60000</option>
+							<option value="7">$60000 - $75000</option>
+							<option value="8">$75000 or more</option>
+						</select>
+					</div>
+
+					<div class="my-3">
+						<label for="AnyHealthcare"
+							>Do you have any health care coverage?
+						</label>
+						<select
+							id="AnyHealthcare"
+							name="AnyHealthcare"
+							required
+							class="form-select my-1"
+						>
+							<option value="" selected disabled hidden>--Select--</option>
+							<option value="1">Yes</option>
+							<option value="0">No</option>
+						</select>
+					</div>
+
+					<div class="my-3">
+						<label for="NoDocbcCost"
+							>Was there a time in the past year when you needed to see a doctor
+							but could not because of costs?
+						</label>
+						<select
+							id="NoDocbcCost"
+							name="NoDocbcCost"
+							required
+							class="form-select my-1"
+						>
+							<option value="" selected disabled hidden>--Select--</option>
+							<option value="1">Yes</option>
+							<option value="0">No</option>
+						</select>
+					</div>
+
+					<div class="my-3">
+						<label for="HighBP">Do you have high blood pressure? </label>
+						<select id="HighBP" name="HighBP" required class="form-select my-1">
+							<option value="" selected disabled hidden>--Select--</option>
+							<option value="1">Yes</option>
+							<option value="0">No</option>
+						</select>
+					</div>
+
+					<div class="my-3">
+						<label for="HighChol">Do you have high cholestrol? </label>
+						<select
+							id="HighChol"
+							name="HighChol"
+							required
+							class="form-select my-1"
+						>
+							<option value="" selected disabled hidden>--Select--</option>
+							<option value="1">Yes</option>
+							<option value="0">No</option>
+						</select>
+					</div>
+
+					<div class="my-3">
+						<label for="CholCheck"
+							>When was the last time you got your cholestrol checked?
+						</label>
+						<select
+							id="CholCheck"
+							name="CholCheck"
+							required
+							class="form-select my-1"
+						>
+							<option value="" selected disabled hidden>--Select--</option>
+							<option value="1">Last 5 Years</option>
+							<option value="0">More Than 5 Years</option>
+						</select>
+					</div>
+
+					<div class="my-3">
+						<label for="Fruits">What is your daily fruit intake? </label>
+						<select id="Fruits" name="Fruits" required class="form-select my-1">
+							<option value="" selected disabled hidden>--Select--</option>
+							<option value="0">Almost never</option>
+							<option value="0">Sometimes</option>
+							<option value="1">Most days</option>
+							<option value="1">Everyday</option>
+						</select>
+					</div>
+
+					<div class="my-3">
+						<label for="Veggies">What is your daily vegetable intake? </label>
+						<select
+							id="Veggies"
+							name="Veggies"
+							required
+							class="form-select my-1"
+						>
+							<option value="" selected disabled hidden>--Select--</option>
+							<option value="0">Almost never</option>
+							<option value="0">Sometimes</option>
+							<option value="1">Most days</option>
+							<option value="1">Everyday</option>
+						</select>
+					</div>
+
+					<div class="my-3">
+						<label for="Smoker"
+							>How many cigarettes have you smoked in your entire life?
+						</label>
+						<select id="Smoker" name="Smoker" required class="form-select my-1">
+							<option value="" selected disabled hidden>--Select--</option>
+							<option value="0">None</option>
+							<option value="0">Less than 100</option>
+							<option value="1">More than 100</option>
+						</select>
+					</div>
+
+					<div class="my-3">
+						<label for="Stroke">Have you ever suffered a stroke? </label>
+						<select id="Stroke" name="Stroke" required class="form-select my-1">
+							<option value="" selected disabled hidden>--Select--</option>
+							<option value="1">Yes</option>
+							<option value="0">No</option>
+						</select>
+					</div>
+
+					<div class="my-3">
+						<label for="HvyAlcoholConsump">Are you a heavy drinker? </label>
+						<select
+							id="HvyAlcoholConsump"
+							name="HvyAlcoholConsump"
+							required
+							class="form-select my-1"
+						>
+							<option value="" selected disabled hidden>--Select--</option>
+							<option value="1">
+								Yes (Men: More than 14 a week / Women: More than 7 a week)
+							</option>
+							<option value="0">No</option>
+						</select>
+					</div>
+
+					<div class="my-3">
+						<label for="DiffWalk"
+							>Do you have any difficulty walking up stairs?
+						</label>
+						<select
+							id="DiffWalk"
+							name="DiffWalk"
+							required
+							class="form-select my-1"
+						>
+							<option value="" selected disabled hidden>--Select--</option>
+							<option value="1">Yes</option>
+							<option value="0">No</option>
+						</select>
+					</div>
+
+					<div class="my-3">
+						<label for="HeartDiseaseorAttack"
+							>Have you ever had a heart attack or suffered from heart disease?
+						</label>
+						<select
+							id="HeartDiseaseorAttack"
+							name="HeartDiseaseorAttack"
+							required
+							class="form-select my-1"
+						>
+							<option value="" selected disabled hidden>--Select--</option>
+							<option value="1">Yes</option>
+							<option value="0">No</option>
+						</select>
+					</div>
+
+					<div class="my-3">
+						<label for="PhysActivity"
+							>Have you been physically active in the last 30 days?
+						</label>
+						<select
+							id="PhysActivity"
+							name="PhysActivity"
+							required
+							class="form-select my-1"
+						>
+							<option value="" selected disabled hidden>--Select--</option>
+							<option value="1">Yes (not including job)</option>
+							<option value="0">No</option>
+						</select>
+					</div>
+
+					<div class="my-3">
+						<label for="GenHlth"
+							>How would you rate your general health?
+						</label>
+						<select
+							id="GenHlth"
+							name="GenHlth"
+							required
+							class="form-select my-1"
+						>
+							<option value="" selected disabled hidden>--Select--</option>
+							<option value="1">Excellent</option>
+							<option value="2">Very Good</option>
+							<option value="3">Good</option>
+							<option value="4">Fair</option>
+							<option value="5">Poor</option>
+						</select>
+					</div>
+
+					<div class="d-flex justify-content-between mt-4 my-3">
+						<label for="MentHlth" class="mt-2"
+							>For how many days during the past 30 days was your mental health
+							not good?
+						</label>
+						<input
+							type="number"
+							id="MentHlth"
+							name="MentHlth"
+							min="0"
+							max="30"
+							step="1"
+							class="form-input mx-1 mt-2"
+						/>
+					</div>
+
+					<div class="d-flex justify-content-between mt-4 my-3">
+						<label for="PhysHlth" class="mt-2"
+							>For how many days during the past 30 days was your physical
+							health not good?
+						</label>
+						<input
+							type="number"
+							id="PhysHlth"
+							name="PhysHlth"
+							min="0"
+							max="30"
+							step="1"
+							class="form-input mx-1 mt-2"
+						/>
+					</div>
+
+					<div class="d-flex justify-content-between my-4">
+						<label for="BMI" class="mt-2">Body Mass Index: </label>
+						<input
+							type="number"
+							id="BMI"
+							name="BMI"
+							min="12"
+							max="98"
+							step="1"
+							class="form-input mx-1 mt-2"
+						/>
+					</div>
+
+					<input type="submit" value="Submit" class="mt-4 btn btn-success" style="width: 100%;" />
+				</form>
+			</div>
+
+		</div>
+	</body>
+</html>
