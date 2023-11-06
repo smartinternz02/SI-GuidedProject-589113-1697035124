@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<meta name="viewport" content="initial-scale=1, maximum-scale=1" >
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 		<style>
 			.MiddleSection {
 				width: auto;
@@ -21,6 +21,20 @@
 				border-width: 1rem;
 			}
 
+			#ExpandButton {
+				width: 40%;
+				background-color: #1b998b;
+				border-radius: 0.5rem;
+				border-width: 0.25rem;
+				padding: 1%;
+				border-color: #333333;
+				border-style: solid;
+			}
+
+			#ExpandButton:hover {
+				background-color: #126057;
+			}
+
 			@media only screen and (min-width: 769px) {
 				.MiddleSection {
 					width: 60%;
@@ -33,16 +47,30 @@
 		/>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 	</head>
-	<body style="background-color: #E8DDB5;">
-		<div class="h-100 d-flex flex-column justify-content-evenly align-items-center" style="background-color: aquamarine; width: 100%;">
-			<h1 class="TextBoxing">Enter your details below to get an estimate of your risk of Diabetes!</h1>
-			<button class="TextBoxing" type="button" data-bs-toggle="collapse" data-bs-target="#InpForm" aria-expanded="false" aria-controls="InpForm">
-				<h4>Click here and scroll down to form</h4>
-			</button>
+	<body style="background-color: #e8ddb5">
+		<div
+			class="d-flex flex-column justify-content-evenly align-items-center px-4"
+			style="background-color: #7fffd4; text-align: center; height: 90%;"
+		>
+			<div class="TextBoxing px-2 py-5">
+				<h1 class="mb-5 mx-5">
+					Enter your details below to get an estimate of your risk of Diabetes!
+				</h1>
+				<button
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#InpForm"
+					aria-expanded="false"
+					aria-controls="InpForm"
+					id="ExpandButton"
+					class="mt-5"
+				>
+					<h3>Expand Form</h3>
+				</button>
+			</div>
 		</div>
-		<div class="my-5 collapse" id="InpForm">
-
-			<div class="MiddleSection" style="background-color: #79ADDC;">
+		<div class="my-5 collapse" id="InpForm" style="padding-top: 10%;">
+			<div class="MiddleSection" style="background-color: #79addc">
 				<h3 class="d-flex justify-content-around">Enter Your Details</h3>
 				<form method="post" action="/input">
 					<div class="my-3">
@@ -361,10 +389,15 @@
 						/>
 					</div>
 
-					<input type="submit" value="Submit" class="mt-4 btn btn-success" style="width: 100%;" />
+					<input
+						type="submit"
+						value="Submit"
+						class="mt-4 btn btn-success"
+						style="width: 100%"
+					/>
 				</form>
 			</div>
-
 		</div>
+		<div style="background-color: #7fffd4; height: 10%; width: 100%;"></div>
 	</body>
 </html>
